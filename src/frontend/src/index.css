@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Casa Fácil palette — navy + gold */
+    /* Navy #1a3a5c → oklch(0.29 0.07 240) */
+    /* Gold #c9a84c → oklch(0.72 0.13 80) */
+    /* White #FFFFFF → oklch(1 0 0) */
+    /* Light gray #F4F6F8 → oklch(0.97 0.005 240) */
+    /* Border #E6E8EC → oklch(0.92 0.005 240) */
+
+    --background: 1 0 0;
+    --foreground: 0.22 0.04 240;
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.04 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.04 240;
+    --primary: 0.29 0.07 240;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.97 0.005 240;
+    --secondary-foreground: 0.29 0.07 240;
+    --muted: 0.97 0.005 240;
+    --muted-foreground: 0.5 0.02 240;
+    --accent: 0.72 0.13 80;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.92 0.005 240;
+    --input: 0.92 0.005 240;
+    --ring: 0.72 0.13 80;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.22 0.04 240;
+    --sidebar-primary: 0.29 0.07 240;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0.005 240;
+    --sidebar-accent-foreground: 0.29 0.07 240;
+    --sidebar-border: 0.92 0.005 240;
+    --sidebar-ring: 0.72 0.13 80;
+
+    /* Brand specific */
+    --navy: oklch(0.29 0.07 240);
+    --navy-dark: oklch(0.2 0.06 240);
+    --gold: oklch(0.72 0.13 80);
+    --gold-dark: oklch(0.62 0.12 80);
+    --surface: oklch(0.97 0.005 240);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
